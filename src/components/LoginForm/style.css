@@ -90,7 +90,7 @@
     transform: scaleX(1);
 }
 
-@media screen and (max-width: 1400px){
+/* @media screen and (max-width: 1400px){
     .form-component{
         width: 25vw;
         height: 55vh;
@@ -101,4 +101,4 @@
     .form-component{
         width: 60vw;
     }
-}
+} */

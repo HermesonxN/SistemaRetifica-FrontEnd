@@ -1,0 +1,28 @@
+.homeSystem-component{
+    height: 50px;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li{
+    padding: 12px;
+}
+
+.menu li:hover{
+    border-radius: 8px;
+    background-color: #e6e6e6;
+}
+
+.menu li a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
