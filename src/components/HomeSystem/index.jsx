@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './style.css';
 import { GrMoney, GrLogout } from "react-icons/gr";
 import { GiArchiveRegister } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeSystem(){
+
+    const token = useSelector(state => state.tokenStore.token)
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        console.log(token)
+        if(!token){
+            navigate('/')
+        }
+    }, [])
+
     return(
         <div className="homeSystem-component">
             <nav className="navbar">

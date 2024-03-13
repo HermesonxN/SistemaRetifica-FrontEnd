@@ -3,12 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import './style.css';
 import motor from '../../assets/img/icons8-motor-100.png';
 import axios from "axios";
-import {BaseURL} from '../../utils/services';
+import { BaseURL } from '../../utils/services';
+import { useDispatch } from 'react-redux';
+import { addToken } from "../../redux/slices/tokenSlice";
 
 export default function Form(){
 
-    const [loginState, setLoginState] = useState({username: '', password: ''})
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [loginState, setLoginState] = useState({username: '', password: ''})
 
     const handleChangeLogin = (event, key) => {
         setLoginState({...loginState, [key]: event.target.value});
@@ -17,9 +20,11 @@ export default function Form(){
     const handleLoginForm = (event) => {
         try{
             event.preventDefault()
-            axios.post(`${BaseURL}/api/login/`, loginState)
-            .then((response) => {
-                navigate('/home')
+            axios.post(`${BaseURL}/api/login/`, loginState).then((response) => {
+                axios.post(`${BaseURL}/token/`, loginState).then((response) => {
+                    dispatch(addToken(response.data.access))
+                    navigate('/home')
+                })
             });
         }catch(err){
             console.log(err)
