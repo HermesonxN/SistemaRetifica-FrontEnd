@@ -7,7 +7,7 @@ import { BaseURL } from '../../utils/services';
 import { useDispatch } from 'react-redux';
 import { addToken } from "../../redux/slices/tokenSlice";
 
-export default function Form(){
+export default function LoginForm(){
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ export default function Form(){
                 <img src={motor} alt="" className="form-logo" />
             </div>
 
-            <form action="" onSubmit={handleLoginForm} className="form">
+            <form onSubmit={handleLoginForm} className="form">
                 <div className="user-div">
                     <label htmlFor="user" className="form-label">USUÁRIO</label>
                     <input
