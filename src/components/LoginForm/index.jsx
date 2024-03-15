@@ -40,7 +40,7 @@ export default function LoginForm(){
             </div>
 
             <form onSubmit={handleLoginForm} className="form">
-                <div className="user-div">
+                <div className="user-div main-div">
                     <label htmlFor="user" className="form-label">USUÁRIO</label>
                     <input
                         type="text"
@@ -52,7 +52,7 @@ export default function LoginForm(){
                     />
                 </div>
 
-                <div className="password-div">
+                <div className="password-div main-div">
                     <label htmlFor="password" className="form-label">SENHA</label>
                     <input
                         type="password"
