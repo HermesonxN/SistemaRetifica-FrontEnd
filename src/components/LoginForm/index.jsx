@@ -18,8 +18,8 @@ export default function LoginForm(){
     }
 
     const handleLoginForm = (event) => {
+        event.preventDefault()
         try{
-            event.preventDefault()
             axios.post(`${BaseURL}/api/login/`, loginState).then((response) => {
                 axios.post(`${BaseURL}/token/`, loginState).then((response) => {
                     dispatch(addToken(response.data.access))
@@ -44,7 +44,7 @@ export default function LoginForm(){
                     <label htmlFor="user" className="form-label">USUÁRIO</label>
                     <input
                         type="text"
-                        value={loginState.user}
+                        value={loginState.username}
                         onChange={(event) => handleChangeLogin(event, 'username')}
                         className="form-field"
                         placeholder="Digite seu nome de usuário"

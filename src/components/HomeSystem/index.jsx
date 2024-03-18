@@ -13,17 +13,12 @@ export default function HomeSystem(){
     const token = useSelector(state => state.tokenStore.token)
     const navigate = useNavigate();
 
-    useEffect(() => {
-        console.log(token)
-        security(token)
-    }, [token])
-
     const security = (token) => {
         if(!token){
             navigate('/')   
         }
     }
-
+     
     const handleLogout = () => {
         try{
             axios.get(`${BaseURL}/api/logout/`)
@@ -34,6 +29,11 @@ export default function HomeSystem(){
             console.log(err)
         }
     }
+    
+    // useEffect(() => {
+    //     console.log(token)
+    //     security(token)
+    // }, [token])
 
     return(
         <div className="homeSystem-component">
