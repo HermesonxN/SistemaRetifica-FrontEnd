@@ -110,33 +110,5 @@
 }
 
 .formRegister-btn{
-    color: white;
-    font-size: 20px;
-    padding: 5px;
-    width: 300px;
-    border: 0;
-    border-radius: 5px;
-    background-color: #414dd3;
-    transition: 0.3s;
-}
-
-.formRegister-btn:hover{
-    transform: scale(1.05);
-}
-
-.formRegister-btn::before{
-    content: "";
-    background-color: #2F3AB2;
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    transition: transform 300ms ease;
-    transform-origin: right;
-    transform: scaleX(0);
-    border-radius: 5px;
-}
-
-.formRegister-btn:hover::before{
-    transform: scaleX(1);
+    width: 400px;
 }

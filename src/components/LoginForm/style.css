@@ -61,34 +61,6 @@
     margin-top: 10px;
 }
 
-.btn{
-    color: white;
-    font-size: 20px;
-    padding: 5px;
-    width: 300px;
-    border: 0;
-    border-radius: 5px;
-    background-color: #414dd3;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    transform: scale(1.05);
-}
-
-.btn::before{
-    content: "";
-    background-color: #2F3AB2;
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    transition: transform 300ms ease;
-    transform-origin: right;
-    transform: scaleX(0);
-    border-radius: 5px;
-}
-
-.btn:hover::before{
-    transform: scaleX(1);
+.loginForm-btn{
+    width: 270px;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './style.css';
+import { useNavigate } from "react-router-dom";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import motor from "../../assets/img/icons8-motor-100.png"
@@ -8,6 +9,7 @@ import { BaseURL } from "../../utils/services";
 
 export default function RegisterServiceForm(){
 
+    const navigate = useNavigate();
     const [selectedDate, setSelectedDate] = useState(null);
     const [serviceState, setServiceState] = useState({
         client_name: '',
@@ -68,6 +70,7 @@ export default function RegisterServiceForm(){
         try{
             axios.post(`${BaseURL}/api/register-service/`, serviceState).then((response) => {
                 console.log(response.data)
+                navigate('/home')
             })
         }catch(err){
             console.log(err)
@@ -78,8 +81,8 @@ export default function RegisterServiceForm(){
         <div className="RegisterServiceForm-component">
             
             <div className="formRegister-header">
-                <h1 className="form-title">Registrar Serviço</h1>
-                <img src={motor} alt="" className="formRegister-logo" />
+                <h1>Registrar Serviço</h1>
+                <img src={motor} alt="Logo"/>
             </div>
 
             <form onSubmit={handleServiceForm} className="form-register">
@@ -233,7 +236,7 @@ export default function RegisterServiceForm(){
                 </div>
 
                 <div className="formRegister-button">
-                    <button type="submit" className="formRegister-btn">Registrar</button>
+                    <button type="submit" className="formRegister-btn btn">Registrar</button>
                 </div>
             </form>
         </div>

@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Registerservice from "./pages/RegisterService";
 import GeneratingPDF from "./pages/generatingPDF";
+import ConsultService from "./pages/consultService";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/home" element={<Home />}></Route>
             <Route path="/budget" element={<Budget />}></Route>
             <Route path="/register-service" element={<Registerservice />}></Route>
+            <Route path="/consult-service" element={<ConsultService />}></Route>
             <Route path="/budget/generating-pdf" element={<GeneratingPDF />}></Route>
           </Routes>
         </BrowserRouter>

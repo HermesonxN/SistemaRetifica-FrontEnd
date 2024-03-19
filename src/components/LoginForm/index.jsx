@@ -35,8 +35,8 @@ export default function LoginForm(){
         <div className="form-component">
 
             <div className="form-header">
-                <h1 className="form-title">TFR SISTEMA</h1>
-                <img src={motor} alt="" className="form-logo" />
+                <h1>TFR SISTEMA</h1>
+                <img src={motor} alt="Logo"/>
             </div>
 
             <form onSubmit={handleLoginForm} className="form">
@@ -65,7 +65,7 @@ export default function LoginForm(){
                 </div>
 
                 <div className="button-div">
-                    <button type="submit" className="btn">Entrar</button>
+                    <button type="submit" className="loginForm-btn btn">Entrar</button>
                 </div>
             </form>
 
