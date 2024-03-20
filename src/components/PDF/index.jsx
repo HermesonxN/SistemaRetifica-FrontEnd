@@ -74,12 +74,10 @@ export default function PDF(props){
 
             <div className="colored-row first">
               <span>Cliente</span>
-              <span>Contato</span>
             </div>
 
             <div className="data-row">
               <span className="font-weight">Xavin Xavesco do Xavão</span>
-              <span className="font-weight">(85) 9.9999-9999</span>
             </div>
 
             <div className="colored-row">

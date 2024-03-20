@@ -85,7 +85,7 @@ export default function RegisterServiceForm(){
                 <img src={motor} alt="Logo"/>
             </div>
 
-            <form onSubmit={handleServiceForm} className="form-register">
+            <form onSubmit={handleServiceForm}>
 
                 <div className="Registersub-titles">
                     <h2>Dados do cliente</h2>
@@ -177,12 +177,12 @@ export default function RegisterServiceForm(){
 
                 <div className="data-service-div main-div">
                     <div className="services-div">
-                        <label htmlFor="" className="form-label checkbox-label">Esmerilhar</label>
-                        <label htmlFor="" className="form-label checkbox-label">Soldar</label>
-                        <label htmlFor="" className="form-label checkbox-label">Pleinar</label>
-                        <label htmlFor="" className="form-label checkbox-label">Lavar</label>
-                        <label htmlFor="" className="form-label checkbox-label">Limpar válvulas</label>
-                        <label htmlFor="" className="form-label checkbox-label">Polir</label>
+                        <label htmlFor="" className="form-label">Esmerilhar</label>
+                        <label htmlFor="" className="form-label">Soldar</label>
+                        <label htmlFor="" className="form-label">Pleinar</label>
+                        <label htmlFor="" className="form-label">Lavar</label>
+                        <label htmlFor="" className="form-label">Limpar válvulas</label>
+                        <label htmlFor="" className="form-label">Polir</label>
                     </div>
 
                     <div className="services-div">
